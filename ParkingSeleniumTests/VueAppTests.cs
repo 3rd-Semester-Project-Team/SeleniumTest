@@ -9,7 +9,7 @@ using OpenQA.Selenium.Edge;
 namespace ParkingSeleniumTests
 {
     [TestClass]
-    public class UnitTest1
+    public class VueAppTests
     {
         private IWebDriver _iWebDriver;
 
@@ -19,7 +19,7 @@ namespace ParkingSeleniumTests
             //Location of the web driver (leave empty if nuget package with driver is installed)
              _iWebDriver = new ChromeDriver();
             //Telling the driver which url to go to. Change the url and port according to you local environment (Vue dev server)
-            _iWebDriver.Navigate().GoToUrl(@"http://localhost:8080/");
+            _iWebDriver.Navigate().GoToUrl("http://localhost:8080/");
         }
         [TestMethod]
         public void TestParkingLotOccupied()
