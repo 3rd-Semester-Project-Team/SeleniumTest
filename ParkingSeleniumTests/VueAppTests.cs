@@ -1,4 +1,5 @@
 
+using System;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using OpenQA.Selenium.Support;
 using OpenQA.Selenium.Support.Extensions;
@@ -26,7 +27,7 @@ namespace ParkingSeleniumTests
         {
             IWebElement iWebElement = _iWebDriver.FindElement(By.Id("1"));
             var colorBefore = iWebElement.GetCssValue("background");
-            _iWebDriver.ExecuteJavaScript("arguments[0].setAttribute('class', 'slot occupied')", iWebElement);
+            _iWebDriver.ExecuteJavaScript("arguments[0].setAttribute('class', 'occupied')", iWebElement);
             var colorAfter = iWebElement.GetCssValue("background");
 
             Assert.AreNotEqual(colorAfter, colorBefore);
